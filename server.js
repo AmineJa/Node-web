@@ -3,6 +3,8 @@ const hbs=require ('hbs');
 const app=express();
 const port=process.env.port || 8088;
 const stylus = require('stylus');
+app.use(favicon(__dirname + '/favicon.ico'));
+
 app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/public'));
 hbs.registerPartials(__dirname + '/views/partials')
