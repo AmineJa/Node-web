@@ -1,5 +1,6 @@
 const express=require('express');
 const hbs=require ('hbs');
+var favicon = require('serve-favicon')
 const app=express();
 const port=process.env.port || 8088;
 const stylus = require('stylus');
