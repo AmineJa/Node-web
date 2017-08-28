@@ -1,6 +1,7 @@
 const express=require('express');
 const hbs=require ('hbs');
 const app=express();
+const port=process.env.port || 8088;
 const stylus = require('stylus');
 app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/public'));
@@ -20,6 +21,6 @@ app.get('/',(req,res)=>{
 });
 
 
-app.listen(8088,function(){
-    console.log("server up");
+app.listen(port,function(){
+    console.log('server up ',port);
 });
